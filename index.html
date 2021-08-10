@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6bddb5a2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Inicio</title>
+</head>
+<body>
+
+    <div class="fondo"></div>
+
+    <div class="ventanaAgregar" id="ventana">
+        <h3 id="textoAgregar">Nuevo cliente</h3>
+        <h3 id="textoEditar">Editar cliente</h3>
+        <div id="error"><h4>Hubo un error, comprueba los datos</h4></div>
+        <form id="main-form">
+            <label for="nombre">Nombre: </label>
+            <input class="rellenarForm" type="text" name="nombre" id="nombre">
+            <br>
+            <label for="apellido">Apellido: </label>
+            <input class="rellenarForm" type="text" name="apellido" id="apellido">
+            <br>
+            <label for="edad">Edad: </label>
+            <input class="rellenarForm edad" type="text" name="edad" id="edad">
+            <br>
+            <label for="genero">Género:</label>
+            <select class="rellenarForm" name="genero" id="genero">
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+            </select>
+            <br>
+            <div class="botonesForm">
+                <button id='agregar' class="rellenarForm boton">Aceptar</button>
+                <button id='editarAceptar' class="rellenarForm boton">Aceptar</button>
+                <button id='cancelar' class="rellenarForm boton">Cancelar</button>
+            </div>
+        </form>
+        <form id="select-form">
+            <br>
+            <button id='depositar' class="rellenarForm boton">Depositar</button>
+            <button id='retirar' class="rellenarForm boton">Retirar</button>
+            <br>
+            <button id='cancelarM' class="rellenarForm boton">Cancelar</button>
+        </form>
+        <form id="money-form">
+            <h3 id="retirarTexto">Retirar</h3>
+            <h3 id="depositarTexto">Depositar</h3>
+            <br>
+            <div id="error2"><h4>Hubo un error, comprueba los datos</h4></div>
+            <label for="dineroActual">Dinero actual: $</label>
+            <input type="text" value="" readonly="readonly" name="dineroActual" id="dineroActual">
+            <label for="ingresarMonto">Ingrese monto: </label>
+            <input type="text" name="ingresarMonto" id="monto">
+            <button id='realizarRetiro' class="rellenarForm boton">Aceptar</button>
+            <button id='realizarDeposito' class="rellenarForm boton">Aceptar</button>
+            <button id='volver' class="rellenarForm boton">Atrás</button>
+        </form>
+    </div>
+
+    
+    <header>
+        <div class="logo">
+            <i class="fas fa-users"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="exclientes.html">Antiguos clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="tit">Clientes actuales</h1>
+        <div class="agregar">
+            <button class="btn" id="agregarNuevo">Agregar nuevo cliente</button>
+        </div>
+        <div class= "tablaEstilo">
+            <table id = "tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Género</th>
+                        <th>Dinero</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hecho por Facundo Nuñez</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
